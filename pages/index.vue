@@ -13,8 +13,11 @@ function startChat() {
 
 <template>
 <div class="main">
-  <h1 class="title">Ollama UI</h1>
-  <h1 class="subtitle">Please pick one of your models to chat with</h1>
+  <div class="title-container">
+    <img src="/logo.svg" alt="Ollama Logo" class="logo"/>
+    <h1 class="title">Ollama UI</h1>
+  </div>
+  <h1 class="subtitle">Please pick one of downloaded models to chat with</h1>
   <ModelPicker v-model="currentModel"/>
 
   <UButton class="start-chat" @click="startChat" :disabled="!currentModel">Start Chat</UButton>
@@ -34,9 +37,21 @@ function startChat() {
   align-items: center;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
 .title {
   font-size: 60px;
-  margin: 20px;
 }
 
 .subtitle {
