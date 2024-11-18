@@ -1,3 +1,5 @@
 <template>
   <NuxtPage />
+  
+  <ConnectionError />
 </template>

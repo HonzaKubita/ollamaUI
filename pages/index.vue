@@ -18,8 +18,6 @@ function startChat() {
   <ModelPicker v-model="currentModel"/>
 
   <UButton class="start-chat" @click="startChat" :disabled="!currentModel">Start Chat</UButton>
-
-  <ConnectionError />
 </div>
 </template>
 
